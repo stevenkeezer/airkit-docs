@@ -53,13 +53,13 @@ const BodyContent = ({ children }) => {
 
   return (
     <div className={`${styles.bodyContent} bg-white dark:bg-gray-900`}>
-      <header className="hidden lg:flex h-10 pl-8 flex items-center justify-between border-b border-gray-200 dark:border-gray-800 relative">
+      <header className="hidden lg:flex h-10 flex items-center justify-between border-b border-gray-200 dark:border-gray-800 relative">
         <div className={`${styles.inputWrapper} mr-2`}>
           <InputSearch
             icon={inputIconsList.search}
             color="text-gray-700 dark:text-gray-300"
             bg="bg-white dark:bg-gray-900"
-            placeholder="Start typing to search..."
+            placeholder="Quick search for anything..."
             style={{ width: '100%' }}
             onSearch={ev => onSearch(ev.target.value)}
             onClick={ev => handleModal(ev)}
@@ -69,7 +69,7 @@ const BodyContent = ({ children }) => {
         {searchBox && <SearchResults items={searchItems} query={searchQuery} />}
         <button className="text-sm text-white bg-pink p-1 px-2 rounded-1 uppercase">Some Link</button>
       </header>
-      <div className="lg:pl-8 pb-8">{children}</div>
+      <div className="pb-8">{children}</div>
     </div>
   );
 };

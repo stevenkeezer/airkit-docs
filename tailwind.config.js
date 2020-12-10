@@ -16,7 +16,7 @@ module.exports = {
     extend: {
       screens: {
         light: { raw: '(prefers-color-scheme: light)' },
-        dark: { raw: '(prefers-color-scheme: dark)' }
+        dark: { raw: '(prefers-color-scheme: light)' }
       }
     },
     colors: {
@@ -201,13 +201,13 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         '.container': {
-          width: '100%',
+          width: '98%',
           maxWidth: 'none',
           '@screen md': {
             maxWidth: '768px'
           },
           '@screen lg': {
-            maxWidth: '1172px'
+            maxWidth: '1536px'
           }
         },
       });

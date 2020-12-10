@@ -5,22 +5,25 @@
 
 @media (min-width: 992px) {
   .mainContent {
-    background: linear-gradient(90deg, #f7fafc 50%, #ffffff 50%);
+    background: linear-gradient(90deg, #ffffff 50%, #ffffff 50%);
   }
 }
 
-@media (min-width: 992px) and (prefers-color-scheme: dark) {
+@media (min-width: 992px) and (prefers-color-scheme: light) {
   .mainContent {
     background: linear-gradient(90deg, #000000 50%, #1a202c 50%);
   }
 }
 
-.mainContent::before {
-  content: '';
-  height: 1px;
-  top: 79px;
-  @apply absolute w-full bg-gray-200;
+@media (max-width: 992px) {
+  .mainContent::before {
+    content: '';
+    height: 1px;
+    top: 79px;
+    @apply absolute w-full bg-gray-200;
+  }
 }
+
 
 @screen dark {
   .mainContent {

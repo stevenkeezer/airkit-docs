@@ -23,24 +23,25 @@ const Sidebar = ({ topLevelNavigation, subLevelNavigation, slug }) => {
   };
 
   return (
-    <div className="bg-white lg:bg-gray-100 dark:bg-transparent lg:dark:bg-black px-2 lg:px-0 -mx-2 lg:mx-0">
-      <header className="h-10 flex items-center justify-between lg:justify-start border-b border-gray-200 dark:border-gray-800">
+    <div className="bg-white dark:bg-transparent lg:dark:bg-black px-2 lg:px-0 -mx-2 lg:mx-0">
+      <header className="h-10 flex items-center justify-between lg:justify-start dark:border-gray-800">
         <Link href="/">
-          <a className="text-black dark:text-white text-2xl">Docs</a>
+          <a className="text-black dark:text-white text-2xl"> <img className="w-16" src="/airkit.logo_.svg"/></a>
         </Link>
         <div className="block lg:hidden">
           <Close handleClick={toggleHeaderMobile} />
         </div>
       </header>
       <StickyBox offsetTop={20} offsetBottom={20}>
-        <div className={cn('pt-4 pb-4 lg:pt-6 lg:block', openHeaderMobile ? 'block' : 'hidden')}>
+        <div className={cn('pt-3 pb-3 lg:pt-6 lg:block', openHeaderMobile ? 'block' : 'hidden')}>
           <div className="mb-3">
             <Link href="/docs">
               <a className="cursor-pointer font-normal text-base text-gray-900 dark:text-gray-300 flex items-center group">
-                <p className="transition-color duration-250 group-hover:opacity-80">Home</p>
+                <p className="transition-color duration-250 group-hover:opacity-80">Documentation</p>
               </a>
             </Link>
           </div>
+          
           {topLevelNavigation && topLevelNavigation.map((item, i) => (
             <Accordion
               key={item.title}
